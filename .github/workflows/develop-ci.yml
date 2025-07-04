@@ -1,0 +1,13 @@
+name: CI – Validate on develop PR
+
+on:
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  validate-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Run htmlhint and stylelint here for validation"

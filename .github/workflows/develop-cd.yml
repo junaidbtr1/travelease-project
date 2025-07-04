@@ -1,0 +1,15 @@
+name: CD – Deploy to Development
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Deploy
+        run: echo "Code deployed to development-env"

@@ -6,16 +6,17 @@ on:
       - main
 
 permissions:
-  contents: write  # ✅ This is required for gh-pages to work
+  contents: write  # ✅ REQUIRED to allow pushing to gh-pages
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout source code
         uses: actions/checkout@v3
 
-      - name: Setup Git config
+      - name: Set up Git config
         run: |
           git config --global user.name 'github-actions'
           git config --global user.email 'github-actions@github.com'
@@ -24,5 +25,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: ./
+          publish_branch: gh-pages         # ✅ GitHub Pages will serve from this branch

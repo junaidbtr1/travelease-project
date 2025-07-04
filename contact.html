@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    function validateForm() {
+      var name = document.forms["contactForm"]["name"].value;
+      var email = document.forms["contactForm"]["email"].value;
+      if (name == "" || email == "") {
+        alert("Name and Email must be filled out");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <header><h1>Contact TravelEase</h1></header>
+  <main>
+    <form name="contactForm" onsubmit="return validateForm()">
+      <input type="text" name="name" placeholder="Your Name"><br>
+      <input type="email" name="email" placeholder="Your Email"><br>
+      <input type="text" name="subject" placeholder="Subject"><br>
+      <textarea name="message" placeholder="Message"></textarea><br>
+      <button type="submit">Send</button>
+    </form>
+    <p>Email: travel@easemail.com | WhatsApp: +92 300 0000000</p>
+    <p>Office in Gilgit</p>
+  </main>
+</body>
+</html>

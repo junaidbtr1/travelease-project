@@ -1,0 +1,13 @@
+name: CI – Release Checks
+
+on:
+  pull_request:
+    branches:
+      - release
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo "Checking release code"

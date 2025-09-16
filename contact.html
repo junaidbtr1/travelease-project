@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - TravelEase</title>
   <link rel="stylesheet" href="css/style.css">
   <script>
     function validateForm() {
@@ -16,17 +17,45 @@
   </script>
 </head>
 <body>
-  <header><h1>Contact TravelEase</h1></header>
+  <header>
+    <h1>Contact TravelEase</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Destinations</a>
+      <a href="trip-guide.html">Trip Planner</a>
+      <a href="stories.html">Stories</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
   <main>
+    <section>
+      <h2>Get in Touch</h2>
+      <p>Have questions about your trip? Need help planning? Contact us using the form below or through our contact information.</p>
+    </section>
+    
     <form name="contactForm" onsubmit="return validateForm()">
       <input type="text" name="name" placeholder="Your Name"><br>
       <input type="email" name="email" placeholder="Your Email"><br>
       <input type="text" name="subject" placeholder="Subject"><br>
-      <textarea name="message" placeholder="Message"></textarea><br>
-      <button type="submit">Send</button>
+      <textarea name="message" placeholder="Your Message" rows="5"></textarea><br>
+      <button type="submit">Send Message</button>
     </form>
-    <p>Email: travel@easemail.com | WhatsApp: +92 300 0000000</p>
-    <p>Office in Gilgit</p>
+    
+    <section>
+      <h2>Other Ways to Reach Us</h2>
+      <p>Email: travel@easemail.com</p>
+      <p>WhatsApp: +92 300 0000000</p>
+      <p>Phone: +92 581 123456</p>
+      <p>Office: TravelEase Headquarters, Jutial, Gilgit, Pakistan</p>
+    </section>
+    
+    <section>
+      <h2>Office Hours</h2>
+      <p>Monday to Friday: 9:00 AM - 6:00 PM</p>
+      <p>Saturday: 10:00 AM - 2:00 PM</p>
+      <p>Sunday: Closed</p>
+    </section>
   </main>
 </body>
 </html>
